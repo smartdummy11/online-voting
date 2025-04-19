@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Results</title></head>
+<body>
+    <h2>Voting Results</h2>
+    <ul>
+        {% for name, votes in candidates.items() %}
+            <li>{{ name }}: {{ votes }} votes</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Vote</title></head>
+<body>
+    <h2>Cast Your Vote</h2>
+    {% if success %}
+        <p style="color:green">{{ success }}</p>
+    {% elif error %}
+        <p style="color:red">{{ error }}</p>
+    {% else %}
+        <form method="POST">
+            {% for name in candidates %}
+                <input type="radio" name="candidate" value="{{ name }}" required> {{ name }}<br>
+            {% endfor %}
+            <button type="submit">Submit Vote</button>
+        </form>
+    {% endif %}
+</body>
+</html>
