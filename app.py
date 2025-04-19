@@ -4,17 +4,17 @@ app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 
 approved_voters = {
-    "ID001": "Alice",
-    "ID002": "Bob",
-    "ID003": "Charlie",
-    "ID004": "David"
+    "ID001": "Khushal",
+    "ID002": "Jeevesh",
+    "ID003": "Priyanka",
+    "ID004": "Akash"
 }
 
 voted_voters = set()
 candidates = {
-    "Candidate A": 0,
-    "Candidate B": 0,
-    "Candidate C": 0
+    "BJP": 0,
+    "CONGRESS": 0,
+    "AJP": 0
 }
 
 @app.route('/', methods=['GET', 'POST'])
